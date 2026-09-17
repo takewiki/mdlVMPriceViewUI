@@ -5,7 +5,7 @@
 \title{发票价生成生成器界面}
 \usage{
 InvoicePriceUI(
-  tabTitle = "发票价",
+  tabTitle = "采购发票价",
   colTitles = c("操作区域", "操作区域", "显示区域"),
   widthRates = c(6, 6, 12),
   func_left = InvoicePriceUI_left,

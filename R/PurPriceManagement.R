@@ -1,4 +1,4 @@
-#' 发票价生成生成器界面
+#' 采购价格管理生成生成器界面
 #'
 #' @param colTitles  主页标题
 #' @param widthRates 左右比例
@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' InvoicePriceUI()
-InvoicePriceUI <- function(tabTitle ='采购发票价',
+#' PurPriceManagementUI()
+PurPriceManagementUI <- function(tabTitle ='采购价格管理',
                          colTitles =c('操作区域','操作区域','显示区域'),
                          widthRates =c(6,6,12),
-                         func_left = InvoicePriceUI_left,
-                         func_right =InvoicePriceUI_right,
-                         func_bottom = InvoicePriceUI_bottom
+                         func_left = PurPriceManagementUI_left,
+                         func_right =PurPriceManagementUI_right,
+                         func_bottom = PurPriceManagementUI_bottom
 ) {
 
   #三栏式设置，可以复制
@@ -37,16 +37,16 @@ InvoicePriceUI <- function(tabTitle ='采购发票价',
 #' @export
 #'
 #' @examples
-#' InvoicePriceUI_left()
-InvoicePriceUI_left <- function() {
+#' PurPriceManagementUI_left()
+PurPriceManagementUI_left <- function() {
 
 
   res <- tagList(
 
-    tsui::mdl_dateRange(id = 'date_InvoicePrice_Date',label = '日期范围'),
+    tsui::mdl_dateRange(id = 'date_PurPriceManagement_Date',label = '日期范围'),
 
-    shiny::actionButton('btn_InvoicePrice_view','查询'),
-    tsui::mdl_download_button(id ='dl_InvoicePrice_view',label = '下载'),
+    shiny::actionButton('btn_PurPriceManagement_view','查询'),
+    tsui::mdl_download_button(id ='dl_PurPriceManagement_view',label = '下载'),
 
 
 
@@ -63,8 +63,8 @@ InvoicePriceUI_left <- function() {
 #' @export
 #'
 #' @examples
-#' InvoicePriceUI_bottom()
-InvoicePriceUI_right <- function() {
+#' PurPriceManagementUI_bottom()
+PurPriceManagementUI_right <- function() {
   res <- tagList(
 
 
@@ -81,10 +81,10 @@ InvoicePriceUI_right <- function() {
 #' @export
 #'
 #' @examples
-#' InvoicePriceUI_bottom()
-InvoicePriceUI_bottom <- function() {
+#' PurPriceManagementUI_bottom()
+PurPriceManagementUI_bottom <- function() {
   res <- tagList(
-    tsui::uiScrollX(tsui::mdl_dataTable(id = 'InvoicePrice_resultView',label ='结果显示' ))
+    tsui::uiScrollX(tsui::mdl_dataTable(id = 'PurPriceManagement_resultView',label ='结果显示' ))
 
   )
   return(res)

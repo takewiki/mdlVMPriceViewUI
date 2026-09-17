@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' OrderPriceUI()
-OrderPriceUI <- function(tabTitle ='订单价',
+OrderPriceUI <- function(tabTitle ='采购订单价',
                          colTitles =c('操作区域','操作区域','显示区域'),
                          widthRates =c(6,6,12),
                          func_left = OrderPriceUI_left,
