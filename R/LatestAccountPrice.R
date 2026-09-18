@@ -43,8 +43,8 @@ LatestAccountPriceUI_left <- function() {
 
   res <- tagList(
 
-    tsui::mdl_dateRange(id = 'date_LatestAccountPrice_Date',label = '日期范围'),
-
+    tsui::mdl_date(id = 'date_LatestAccountPrice_Date',label = '计算日期'),
+    tsui::mdl_text(id = 'txt_LatestAccountPrice_ItemNumber',label = '物料编码',value = ''),
     shiny::actionButton('btn_LatestAccountPrice_view','查询'),
     tsui::mdl_download_button(id ='dl_LatestAccountPrice_view',label = '下载'),
 

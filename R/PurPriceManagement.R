@@ -43,8 +43,8 @@ PurPriceManagementUI_left <- function() {
 
   res <- tagList(
 
-    tsui::mdl_dateRange(id = 'date_PurPriceManagement_Date',label = '日期范围'),
-
+    tsui::mdl_date(id = 'date_PurPriceManagement_Date',label = '计算日期'),
+    tsui::mdl_text(id = 'txt_PurPriceManagement_ItemNumber',label = '物料编码',value = ''),
     shiny::actionButton('btn_PurPriceManagement_view','查询'),
     tsui::mdl_download_button(id ='dl_PurPriceManagement_view',label = '下载'),
 
